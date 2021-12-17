@@ -10,11 +10,16 @@ services:
         - node_modules:/home/node/app/node_modules
     environment:
         - DATABASE_URL=postgres://postgres:password@postgres:5432/todo
+        - WAIT_HOSTS=postgres:5432
     ports:
     - "3000:3000"
+    # command: sh -c './wait-for-postgres.sh && yarn dev'
     command: ["yarn", "dev"]
-    links:
+    # links:
+    #     - postgres
+    depends_on:
         - postgres
+    # command: sh -c './wait-for postgres:5432 -- yarn dev'
   # production-server:
   #   container_name: service-name
   #   build:
