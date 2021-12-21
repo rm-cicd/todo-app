@@ -14,7 +14,8 @@ services:
     ports:
     - "3000:3000"
     # command: sh -c './wait-for-postgres.sh && yarn dev'
-    command: ["yarn", "dev"]
+    # command: ["yarn", "dev"]
+    command: sh -c '.wait-for && yarn dev'
     # links:
     #     - postgres
     depends_on:
