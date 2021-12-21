@@ -6,7 +6,7 @@ const { StaticApp } = require('@keystonejs/app-static');
 
 const { KnexAdapter: Adapter } = require('@keystonejs/adapter-knex');
 const PROJECT_NAME = 'todo-app';
-const adapterConfig = { knexOptions: { connection: 'postgres://postgres:password@localhost/todo' } };
+const adapterConfig = { knexOptions: { connection: 'postgres://postgres:password@postgres/todo' } };
 
 
 const keystone = new Keystone({
