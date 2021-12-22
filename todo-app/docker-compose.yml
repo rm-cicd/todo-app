@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   devbox:
     container_name: dev-keystone
@@ -6,15 +6,15 @@ services:
       context: .
       dockerfile: dev.dockerfile
     volumes:
-        - .:/home/node/app
-        - node_modules:/home/node/app/node_modules
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
     environment:
-        - DATABASE_URL=postgres://postgres:password@postgres:5432/todo
+      - DATABASE_URL=postgres://postgres:password@postgres:5432/todo
     ports:
-    - "3000:3000"
+      - "3000:3000"
     command: ["yarn", "dev"]
     links:
-        - postgres
+      - postgres
   # production-server:
   #   container_name: service-name
   #   build:
@@ -33,9 +33,9 @@ services:
     image: "postgres:12"
     container_name: "postgres"
     environment:
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=password
-        - POSTGRES_DB=todo
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=todo
     ports:
       - "5432:5432"
     volumes:
