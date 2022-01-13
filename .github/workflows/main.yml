@@ -32,10 +32,12 @@ jobs:
 
       - name: Prettier Format Check
         run: |
+          cd todo-app
           yarn prettier -c .
       
       - name: Mocha Test
         run: |
+          cd todo-app
           yarn test
 
       
