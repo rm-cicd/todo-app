@@ -25,6 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
+      - name: Mocha Test
+        run: |
+          cd todo-app
+          yarn test
+      
       - name: Docker Compose Setup
         run: |
           cd todo-app
@@ -35,10 +40,7 @@ jobs:
           cd todo-app
           yarn prettier -c .
       
-      - name: Mocha Test
-        run: |
-          cd todo-app
-          yarn test
+      
 
       
 
