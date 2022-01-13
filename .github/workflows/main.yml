@@ -28,5 +28,8 @@ jobs:
       - name: Docker Compose Setup
         run: |
           cd todo-app
+          yarn -v
+          docker -v
+          node -v
           yarn container
           
