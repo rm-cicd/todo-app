@@ -27,5 +27,6 @@ jobs:
       
       - name: Docker Compose Setup
         run: |
+          pwd
           yarn container
           
