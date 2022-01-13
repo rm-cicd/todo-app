@@ -32,7 +32,9 @@ jobs:
           yarn container
 
       - name: Install Dependencies
-        run: yarn install
+        run: |
+          cd todo-app
+          yarn install
 
       - name: Prettier Format Check
         run: |
