@@ -30,12 +30,14 @@ jobs:
           cd todo-app
           yarn container
 
+      - name: Prettier Format Check
+        run: |
+          yarn prettier -c .
+      
       - name: Mocha Test
         run: |
           yarn test
 
-      - name: Prettier Format Check
-        run: |
-          yarn prettier -c .
+      
 
           
