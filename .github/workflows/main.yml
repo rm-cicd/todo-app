@@ -28,9 +28,7 @@ jobs:
       - name: Mocha Test
         run: |
           cd todo-app
-          pwd
-          ls
-          yarn test
+          yarn run test
       
       - name: Docker Compose Setup
         run: |
