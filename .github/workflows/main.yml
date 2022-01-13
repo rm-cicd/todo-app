@@ -31,14 +31,15 @@ jobs:
           cd todo-app
           yarn container
 
-      - name: Install Dependencies
-        run: |
-          cd todo-app
-          yarn install
+      # - name: Install Dependencies
+      #   run: |
+      #     cd todo-app
+      #     yarn install
 
       - name: Prettier Format Check
         run: |
           cd todo-app
+          yarn install
           yarn prettier -c .
 
       - name: Mocha Test
