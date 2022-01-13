@@ -28,6 +28,7 @@ jobs:
       - name: Mocha Test
         run: |
           cd todo-app
+          yarn install
           yarn run test
       
       - name: Docker Compose Setup
