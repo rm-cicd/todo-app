@@ -45,9 +45,3 @@ jobs:
         run: |
           cd todo-app
           yarn run test
-      
-      
-
-      
-
-          
