@@ -34,6 +34,7 @@ jobs:
       # a
       - name: Prettier Format Check
         run: |
+          cd todo-app
           yarn prettier -c .
 
       - name: Mocha Test
