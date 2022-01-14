@@ -33,8 +33,12 @@ jobs:
 
       - name: install dependencies
         run: |
+          ls -la
+          chmod o=rwx --recurse
+          ls -la
           cd todo-app
-          yarn install --frozen-lockfile
+          ls -la
+          yarn install
 
       - name: Prettier Format Check
         run: |
