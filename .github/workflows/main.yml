@@ -33,7 +33,7 @@ jobs:
 
       - name: install dependencies
         run: |
-          cd todo-app/todo-app
+          cd todo-app
           yarn install
 
       - name: Prettier Format Check
