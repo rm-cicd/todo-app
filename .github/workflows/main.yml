@@ -31,14 +31,10 @@ jobs:
           cd todo-app
           yarn container
 
-      - name: Check workspace
+      - name: install dependencies
         run: |
-          ls /home/runner/work
-          echo ===========
-          ls /home/runner/work/todo-app
-          echo ===========
-          ls /home/runner/work/todo-app/todo-app
-          # yarn install
+          cd todo-app/todo-app
+          yarn install
 
       - name: Prettier Format Check
         run: |
