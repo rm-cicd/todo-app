@@ -34,7 +34,7 @@ jobs:
       - name: install dependencies
         run: |
           ls -la
-          chmod o=rwx --recursive
+          chmod o=rwx ./todo-app --recursive
           ls -la
           cd todo-app
           ls -la
