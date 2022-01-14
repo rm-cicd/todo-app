@@ -31,15 +31,7 @@ jobs:
           cd todo-app
           yarn container
 
-      - name: install dependencies
-        run: |
-          ls -la
-          chmod o=rwx ./todo-app --recursive
-          ls -la
-          cd todo-app
-          ls -la
-          yarn install
-
+      # a
       - name: Prettier Format Check
         run: |
           yarn prettier -c .
