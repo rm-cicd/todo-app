@@ -34,7 +34,7 @@ jobs:
       - name: install dependencies
         run: |
           cd todo-app
-          yarn install
+          yarn install --frozen-lockfile
 
       - name: Prettier Format Check
         run: |
